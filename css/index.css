@@ -287,8 +287,8 @@ li {
   padding: 5%;
 }
 .home .walk button:hover {
-  background-color: #23293B;
-  color: #5E6164;
+  background-color: green;
+  color: black;
   border-radius: 12px;
   font-size: 1.4rem;
   text-align: center;
