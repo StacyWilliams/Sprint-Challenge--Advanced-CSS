@@ -175,6 +175,11 @@ header {
   border: #F1F1F1;
   font-style: #454A59;
 }
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
+}
 h2 {
   display: flex;
   justify-content: center;
@@ -196,10 +201,22 @@ li {
 .home .intro p {
   padding: 0 15px;
 }
+@media (max-width: 500px) {
+  .home .intro {
+    display: inline;
+  }
+}
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .home .space-images img {
   width: 28%;
@@ -223,6 +240,13 @@ li {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
 }
@@ -232,9 +256,32 @@ li {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+.home .walk .walk-text p .btn {
+  background-color: #22283A;
+  color: #F6F7F8;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5%;
+}
+.home .walk .walk-text p .btn:hover {
+  background-color: #23293B;
+  color: #5E6164;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  text-align: center;
+  vertical-align: middle;
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;

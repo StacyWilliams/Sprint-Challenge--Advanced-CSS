@@ -3,6 +3,12 @@ header {
   background-color: @nav-bg;
   border: @nav-border;
   font-style: @nav-font;
+
+  @media @phone {
+    width: 100%;
+  }
+
+  
   
 }
 h2 {
@@ -43,13 +49,24 @@ nav {
     p {
       padding:0 15px;
     }
-  
+
+    @media @phone {
+      display: inline;
+}
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    @media @phone {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+    
 
     img {
       width: 28%;
@@ -77,6 +94,14 @@ nav {
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+   
+         @media @phone {
+           
+         display: flex;
+         flex-direction: column-reverse;
+         justify-content: center;
+  }
+
 
     .walk-text {
       width: 50%;
@@ -87,21 +112,48 @@ nav {
 
       p {
         margin-bottom: 26px;
-      }
 
-      .btn {
-      }
-    }
+        
 
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
+    .btn {
+       
+       
+        .buttons(30%; @btn-bg-color; @porcelain; 1rem);
+         padding: 5%;
+
+          &:hover {
+             .buttons(95px; @ebony-clay; @shuttle-gray; 1.4rem);
+            }
+        }
+     
+      }
       
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
     }
-  }
-}// home
+    
+        
+       
+    
+        .walk-img {
+          width: 46%;
+          margin-left: 4%;
+    
+          @media @phone {
+            width: 100%;
+            margin: 0 auto;
+          }
+        
+       
+      
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+      }
+    
+     
+    
+      }
+  } } 
+   
+  
+
