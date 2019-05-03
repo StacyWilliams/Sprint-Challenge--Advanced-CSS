@@ -256,7 +256,7 @@ li {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk .walk-text p .btn {
+.home .walk button {
   background-color: #22283A;
   color: #F6F7F8;
   border-radius: 12px;
@@ -265,7 +265,7 @@ li {
   vertical-align: middle;
   padding: 5%;
 }
-.home .walk .walk-text p .btn:hover {
+.home .walk button:hover {
   background-color: #23293B;
   color: #5E6164;
   border-radius: 12px;
