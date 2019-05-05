@@ -1,23 +1,26 @@
 // Home Content
 header {
+   
   background-color: @nav-bg;
   border: @nav-border;
   font-style: @nav-font;
+  
 
   @media @phone {
-    width: 100%;
+    .wide
   }
 
   
   
-}
+
 h2 {
-  display: flex;
-  justify-content: center;
+  .flexer;
+  .middle;
 }
 nav {
-  display: flex;
-  justify-content: center;
+  
+  .flexer;
+  .middle;
    padding: 2%;
    
    
@@ -25,20 +28,23 @@ nav {
         
    }
    li {
+    
      display: inline;
      align-items: space-around;
      padding: 10px;
-    
      
+        
    }
 
-   
+ 
+  } 
 
 
 .home {
   
   
   .intro {
+    
 
     h2 {
       padding: 15px;
@@ -48,12 +54,14 @@ nav {
     
 
     p {
+      
       padding:0 15px;
       
 }
 
       @media @phone {
        display: inline;
+       width:90%;
        padding: 15px;
        
        
@@ -64,15 +72,23 @@ nav {
   
 
   .space-images {
-    display: flex;
+    .flexer;
     flex-wrap: wrap;
-    width: 100%;
+    .wide;
 
     @media @phone {
       
-      display: flex;
+      .flexer;
       flex-direction: column;
       align-items: center;
+
+      .sky {
+        .disappear();
+      }
+      .launch {
+        .disappear();
+      }
+      
   }
     
 
@@ -85,8 +101,8 @@ nav {
       @media @phone {
         width: 90%;
         padding: 5px;
-        justify-content: center;
-        margin: 0 auto;
+        .middle;
+        .gin;
       }    
     
     }
@@ -98,6 +114,7 @@ nav {
     padding: 15px;
 
     h3 {
+      
       margin-top: 11px;
     }
 
@@ -106,8 +123,8 @@ nav {
     }
     @media @phone {
       width: 90%;
-      justify-content: center;
-      margin: 0 auto;
+      .middle;
+      .gin;
     }
   }
 
@@ -115,14 +132,14 @@ nav {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .flexer;
+    .middle;
    
          @media @phone {
            
-         display: flex;
+          .flexer;
          flex-direction: column-reverse;
-         justify-content: center;
+         .middle;
   }
 
 
@@ -154,13 +171,14 @@ nav {
        padding: 5%;
 
        &:hover {
-          .buttons(95px; green; black; 1.4rem);
+          .buttons(45%; dodgerblue; black; 1.4rem);
+          
          }
 
          @media @phone {
-          width: 100%;
-          justify-content: center;
-          margin: 0 auto;
+          .wide;
+          .middle;
+          .gin;
         }
      }  
     
@@ -169,15 +187,15 @@ nav {
           margin-left: 4%;
     
           @media @phone {
-            width: 100%;
-            justify-content: center;
-            margin: 0 auto;
+            .wide;
+            .middle;
+            .gin;
           }
         
        
       
         img {
-          width: 100%;
+          .wide;
           height: auto;
           border-radius: 10px;
       }
