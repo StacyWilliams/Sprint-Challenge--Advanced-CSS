@@ -1,41 +1,130 @@
 // Home Content
+header {
+   
+  background-color: @nav-bg;
+  border: @nav-border;
+  font-style: @nav-font;
+  
+
+  @media @phone {
+    .wide
+  }
+
+  
+  
+
+h2 {
+  .flexer;
+  .middle;
+}
+nav {
+  
+  .flexer;
+  .middle;
+   padding: 2%;
+   
+   
+   
+        
+   }
+   li {
+    
+     display: inline;
+     align-items: space-around;
+     padding: 10px;
+     
+        
+   }
+
+ 
+  } 
+
 
 .home {
-
+  
+  
   .intro {
+    
 
     h2 {
       padding: 15px;
+      justify-content: left;
+
     }
+    
 
     p {
+      
       padding:0 15px;
-    }
+      
+}
+
+      @media @phone {
+       display: inline;
+       width:90%;
+       padding: 15px;
+       
+       
+       
+      
+}
+}
   
-  }
 
   .space-images {
-    display: flex;
+    .flexer;
     flex-wrap: wrap;
-    width: 100%;
+    .wide;
+
+    @media @phone {
+      
+      .flexer;
+      flex-direction: column;
+      align-items: center;
+
+      .sky {
+        .disappear();
+      }
+      .launch {
+        .disappear();
+      }
+      
+  }
+    
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    
+      @media @phone {
+        width: 90%;
+        padding: 5px;
+        .middle;
+        .gin;
+      }    
+    
     }
   }
+
+
 
   .visit-planets {
     padding: 15px;
 
     h3 {
+      
       margin-top: 11px;
     }
 
     p {
       margin-top: 13px;
+    }
+    @media @phone {
+      width: 90%;
+      .middle;
+      .gin;
     }
   }
 
@@ -43,8 +132,16 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .flexer;
+    .middle;
+   
+         @media @phone {
+           
+          .flexer;
+         flex-direction: column-reverse;
+         .middle;
+  }
+
 
     .walk-text {
       width: 50%;
@@ -56,20 +153,57 @@
       p {
         margin-bottom: 26px;
       }
+        @media @phone {
+          width: auto;
+       }
 
-      .btn {
-      }
-    }
-
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
+        
+     
       
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
+      
     }
-  }
-}// home
+    
+        
+    button {
+       
+       
+      .buttons(30%; @btn-bg-color; @porcelain; 1rem);
+       padding: 5%;
+
+       &:hover {
+          .buttons(45%; dodgerblue; black; 1.4rem);
+          
+         }
+
+         @media @phone {
+          .wide;
+          .middle;
+          .gin;
+        }
+     }  
+    
+        .walk-img {
+          width: 46%;
+          margin-left: 4%;
+    
+          @media @phone {
+            .wide;
+            .middle;
+            .gin;
+          }
+        
+       
+      
+        img {
+          .wide;
+          height: auto;
+          border-radius: 10px;
+      }
+    
+     
+    
+      }
+  } } 
+   
+  
+
