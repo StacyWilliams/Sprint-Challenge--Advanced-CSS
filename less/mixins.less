@@ -1,37 +1,23 @@
 // Mixins Here
-.buttons(@width; @bgc; @tc; @fontsize) {
-	background-color: @bgc;
-	color: @tc;
-	border-radius: 12px;
-	font-size: @fontsize;
-	text-align: center;
-    vertical-align: middle;
-    opacity: 0.6;
-    transition: 0.6s;
-	
+
+// flex space between
+.space-between {
+    display:flex;
+    justify-content: space-between;
 }
-.middle() {
+
+.flex-center {
+    display:flex;
     justify-content: center;
 }
 
-.disappear () {
-    display:none;
-}
-
-.flexer() {
-    display:flex;
-}
-
-.gin(){
-    margin: 0 auto; 
-}
-
-.wide () {
-    width: 100%;
-}
-
-.funky-font(@color,@font-size){
-
+.buttons(@color,@background) {
+    background:@background;
     color:@color;
-    font-size: @font-size;
+    width:110px;
+    padding:13px 25px;
+    text-align:center;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:1.5rem;
 }

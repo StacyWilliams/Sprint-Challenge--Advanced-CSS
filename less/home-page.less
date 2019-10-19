@@ -1,130 +1,68 @@
 // Home Content
-header {
-   
-  background-color: @nav-bg;
-  border: @nav-border;
-  font-style: @nav-font;
-  
-
-  @media @phone {
-    .wide
-  }
-
-  
-  
-
-h2 {
-  .flexer;
-  .middle;
-}
-nav {
-  
-  .flexer;
-  .middle;
-   padding: 2%;
-   
-   
-   
-        
-   }
-   li {
-    
-     display: inline;
-     align-items: space-around;
-     padding: 10px;
-     
-        
-   }
-
- 
-  } 
-
 
 .home {
-  
-  
+
   .intro {
-    
+    .main-header-banner img {
+      border-radius:5px;
+      margin-top:93px;
+      width:100%;
+      @media @mobile {
+          width:100%;
+      }
+    }
 
     h2 {
       padding: 15px;
-      justify-content: left;
-
     }
-    
 
     p {
-      
       padding:0 15px;
-      
-}
-
-      @media @phone {
-       display: inline;
-       width:90%;
-       padding: 15px;
-       
-       
-       
-      
-}
-}
+    }
   
+  }
 
   .space-images {
-    .flexer;
+    display: flex;
     flex-wrap: wrap;
-    .wide;
+    width: 100%;
 
-    @media @phone {
-      
-      .flexer;
-      flex-direction: column;
-      align-items: center;
+    img:nth-child(1) {
+      @media @mobile {
+        // display:none;
+        width:100%;
+      }
+    }
 
-      .sky {
-        .disappear();
+    img:nth-child(2) {
+      @media @mobile {
+        display:none;
       }
-      .launch {
-        .disappear();
+    }
+
+    img:nth-child(3) {
+      @media @mobile {
+        display:none;
       }
-      
-  }
-    
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-    
-      @media @phone {
-        width: 90%;
-        padding: 5px;
-        .middle;
-        .gin;
-      }    
-    
     }
   }
-
-
 
   .visit-planets {
     padding: 15px;
 
     h3 {
-      
       margin-top: 11px;
     }
 
     p {
       margin-top: 13px;
-    }
-    @media @phone {
-      width: 90%;
-      .middle;
-      .gin;
     }
   }
 
@@ -132,19 +70,24 @@ nav {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    .flexer;
-    .middle;
-   
-         @media @phone {
-           
-          .flexer;
-         flex-direction: column-reverse;
-         .middle;
-  }
+    display: flex;
+    justify-content: center;
 
+    @media @mobile {
+      display:flex;
+      flex-direction:column-reverse;
+      width:100%;
+      margin:0px;
+      padding:15px;
+    }
 
     .walk-text {
       width: 50%;
+
+      @media @mobile {
+        width:100%;
+        margin:0px;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -153,57 +96,107 @@ nav {
       p {
         margin-bottom: 26px;
       }
-        @media @phone {
-          width: auto;
-       }
 
-        
-     
-      
-      
-    }
-    
-        
-    button {
-       
-       
-      .buttons(30%; @btn-bg-color; @porcelain; 1rem);
-       padding: 5%;
-
-       &:hover {
-          .buttons(45%; dodgerblue; black; 1.4rem);
-          
-         }
-
-         @media @phone {
-          .wide;
-          .middle;
-          .gin;
+      .btn {
+        .buttons(@porcelain,@btn-bg-color);
+        &:hover {
+          .buttons(@btn-bg-color,@porcelain)
         }
-     }  
-    
-        .walk-img {
-          width: 46%;
-          margin-left: 4%;
-    
-          @media @phone {
-            .wide;
-            .middle;
-            .gin;
-          }
-        
-       
-      
-        img {
-          .wide;
-          height: auto;
-          border-radius: 10px;
+        @media @mobile {
+          width:100%;
+          padding:30px;
+          // flex-direction:column-reverse;
+        }
       }
-    
-     
-    
-      }
-  } } 
-   
-  
+    }
 
+    .walk-img {
+      width: 46%;
+      margin-left: 4%;
+      @media @mobile {
+          width:100%;
+          margin:0 0 20px 0;
+      }
+      
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+  }
+}// home
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalForm {
+  width:500px;
+  margin:0 auto;
+  .form-fields {
+    .space-between();
+    margin-bottom:20px;
+    .input-field {
+      input, textarea {
+        padding:10px 30px;
+        border:2px solid @btn-bg-color;
+      }
+    }
+
+    button {
+      background:@btn-bg-color;
+      color:@porcelain;
+      width:100%;
+      padding:20px;
+
+    }
+  }
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+
+  h3,p {
+    text-align:center;
+    margin-bottom:20px;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+// .modal-ease-in {
+//   display:block;
+//   transition: 8s ease-in
+// }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
