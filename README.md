@@ -1,5 +1,7 @@
 # Sprint Challenge: Advanced CSS - Space Walkers Web Page
 
-![MVP1](/img/MVP1.png)
+##image 1
+![MVP1](/img/MVP2.png)
 
-![MVP2](/img/MVP2.png)
+##image 2
+![MVP2](/img/MVP1.png)
